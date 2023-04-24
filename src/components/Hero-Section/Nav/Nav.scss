@@ -1,0 +1,69 @@
+@mixin font {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+#nav-container {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    background-color: #302c42;
+    padding: 50px 84px;
+} 
+
+#logo-container { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 48px;
+    transform: scaleX(0.5);
+    white-space: none;
+    color: #8176AF;
+}
+
+.nav-links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+a {
+    @include font;
+    text-decoration: none;
+    color: #fff;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 38px;
+}
+
+.join-hydra-button {
+    background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
+    width: 155px;
+    height: 48px;
+    border-radius: 40px;
+    border: none;
+    @include font;
+}
+
+.contact-us-button {
+    background: transparent;
+    color: #fff;
+    width: 155px;
+    height: 48px;
+    border-radius: 40px;
+    border: 2px solid #fff;
+    @include font;
+}
