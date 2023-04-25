@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../../assets/icons/Frame.svg";
+import group from "../../../assets/icons/Group.svg";
 import "./Nav.scss";
 
 export default function Nav() {
@@ -7,7 +8,7 @@ export default function Nav() {
         <div id="nav-container">
             <div id="logo-container">
                 <img src={logo} alt="Hydra Logo"/>
-                <h1>HYDRA</h1>
+                <img src={group} alt="" />
             </div>
             <div className="nav-links-container">
                 <a href="#about-container">ABOUT</a>
