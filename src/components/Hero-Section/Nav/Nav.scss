@@ -5,8 +5,9 @@
 }
 
 #nav-container {
+    position: relative;
     display: flex;
-    // justify-content: space-between;
+    justify-content: space-between;
     font-weight: 700;
     margin-bottom: 100px;
 } 
@@ -24,7 +25,7 @@
     justify-content: center;
     align-items: center;
     gap: 40px;
-    margin: 0 10% 0 16.309%;
+    // margin: 0 10% 0 16.309%;
 }
 
 a {
@@ -57,4 +58,137 @@ a {
     border-radius: 40px;
     border: 2px solid #fff;
     @include font;
+}
+
+.burger-menu {
+    position: relative;
+    width: 50px;
+    height: 40px;
+    display: none;
+    z-index: 2;
+}
+
+.burger-menu:hover {
+    cursor: pointer;
+}
+
+.line {
+    height: 7px;
+    position: absolute;
+    background-color: black;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    background: linear-gradient(90deg, #C0B7E8 -15.79%, #8176AF 100%);
+    border-radius: 40px;
+}
+
+.top {
+    width: 50px;
+    top: 0;
+    right: 0;
+    margin-bottom: 8px;
+}
+
+.middle {
+    width: 25px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.bottom {
+    width: 50px;
+    bottom: 0;
+    right: 0;
+}
+
+.clicked .middle {
+    transform: translate(-50%, -50%) translateX(-5px);
+    opacity: 0;
+}
+
+.clicked .line {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.clicked .line.top {
+    transform: translateY(16px) rotate(-45deg);
+}
+
+.clicked .line.bottom {
+    transform: translateY(-16px) rotate(45deg);
+}
+
+.dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #fff;
+    right: 0;
+    background: radial-gradient(50% 2900.76% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211E2E 100%);
+    padding: 20px 40px;
+    border-radius: 16px;
+}
+
+.nav-links-container-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.buttons-container-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.visible {
+    display: flex;
+    bottom: -230px;
+    transition: 1s ease;
+    animation: slide-in 0.5s ease-in-out;
+}
+
+.hidden {
+    display: none;
+    animation: slide-out 0.5s ease-in-out;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@media screen and(max-width: 1200px) {
+
+    #nav-container {
+        align-items: center;
+    }
+
+    .burger-menu {
+        display: inline;
+    }
+
+    .buttons-container {
+        display: none;
+    }
+
+    .nav-links-container {
+        display: none;
+    }
 }

@@ -52,3 +52,22 @@ p {
     height: 455px;
     // object-fit: cover;
 }
+
+@media screen and (max-width: 992px) {
+
+    #header-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 50px;
+    }
+
+    #text-container {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    p, #buttons-container > img {
+        display: none;
+    }
+}
