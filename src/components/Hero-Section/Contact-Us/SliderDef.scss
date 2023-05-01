@@ -1,0 +1,47 @@
+.contact_slider {
+    font-family: 'Montserrat', sans-serif;
+    display: none !important;
+    gap: 50px;
+    background: radial-gradient(50% 2900.76% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211E2E 100%);
+    border-radius: 90px;
+    height: 167px;
+    color: #fff;
+}
+
+.swiper-wrapper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact_slider .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    color: #fff;
+    --swiper-navigation-size: 20px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    opacity: 1;
+}
+
+.contact_slider .swiper-button-next {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    color: #fff;
+    --swiper-navigation-size: 20px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    opacity: 1;
+}
+
+@media screen and (max-width: 1200px) {
+    .contact_slider {
+        display: flex !important;
+    }
+}

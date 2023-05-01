@@ -1,7 +1,6 @@
 import React from "react";
 import arrow from "../../../assets/icons/arrow-small-right.svg";
 import image from "../../../assets/images/hero-image.png";
-import "./Header.scss";
 
 export default function Header() {
     return (

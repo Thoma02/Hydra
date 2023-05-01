@@ -1,0 +1,277 @@
+@import '../../App.scss';
+// const techImageMobile = require('../../assets/images/tech-image-mobile.svg').default;
+
+// .mobile-image {
+//     content: url('../../assets/images/tech-image-mobile.svg');
+// }
+
+.tech-container {
+    position: relative;
+    padding: 0 78px 0 84px;
+    max-width: 1800px;
+    margin: 0 auto 69px;
+    min-height: 500px;
+    // min-width: 100%;
+}
+
+.tech-main-container {
+    position: absolute;
+    top: 0;
+    width: calc(100% - 162px);
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tech-main-container img {
+    width: 100%;
+}
+
+.tech-title-container {
+    position: absolute;
+    text-align: center;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tech-title-container h1 {
+    margin-bottom: 11px;
+    @include fontHeader1;
+}
+
+.tech-title-container h2 {
+   @include fontHeader2;
+}
+
+.tech-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    // transform: rotate(180deg);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 70px;
+    height: 70px;
+    @include circleButtons;
+    transition: all 0.2s ease-in-out;
+}
+
+.tech-button:hover {
+    cursor: pointer;
+    // background: linear-gradient(251.27deg, #C0B7E8 89.33%, #8176AF 12.87%);
+    background: linear-gradient(251.27deg, #C0B7E8 30%, #8176AF 70%);
+    box-shadow: 0 0 0px 10px rgba(14, 14, 14, 0.5);
+    transition: all 0.2s ease-in-out;
+}
+
+.tech-arrow-left {
+    position: absolute;
+    width: 25px;
+    height: 5px;
+    background-color: #343045;
+    transform: rotate(45deg);
+    border-radius: 5px;
+    left: 16px;
+    bottom: 30px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.tech-arrow-right {
+    position: absolute;
+    right: 14px;
+    width: 25px;
+    height: 5px;
+    background-color: #343045;
+    transform: rotate(-45deg);
+    border-radius: 5px;
+    bottom: 30px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.tech-boxes-container {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: calc(100% - 162px);
+    left: 50%;
+    transform: translateX(-50%);
+    animation: show 1s ease-in-out forwards;
+}
+
+.hidden {
+    animation: hide 1s ease-in-out forwards;
+}
+
+.rotate-left {
+    transform: rotate(-45deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.rotate-right {
+    transform: rotate(45deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+@keyframes hide {
+    0% {
+        top: 320px;
+    }
+    100% {
+        top: -10px;
+    }
+}
+
+@keyframes hideMobile {
+    0% {
+        top: 320px;
+        scale: 1;
+    }
+
+    100% {
+        top: -200px;
+        left: 100px;
+        scale: 0;
+    }
+}
+
+@keyframes show {
+    0% {
+        top: -10px;
+    }
+    100% {
+        top: 320px;
+    }
+}
+
+@keyframes showMobile {
+    0% {
+        top: -200px;
+        left: 100px;
+        scale: 0;
+    }
+
+    100% {
+        top: 320px;
+        scale: 1;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .tech-boxes-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+        animation: showMobile 1s ease-in-out forwards;
+    }
+
+    .tech-boxes-container img {
+        flex-basis: 35%;
+    }
+
+    .hidden {
+        animation: hideMobile 1s ease-in-out forwards;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    .tech-boxes-container {
+        display: none;
+    }
+
+    .tech-button {
+        display: none;
+    }
+
+    .tech-container .slider_services {
+        position: absolute;
+        top: calc(380px);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 400px;
+    }
+
+    .tech-container .swiper-button-prev {
+        top: 120px;
+        left: 10px;
+    }
+
+    .tech-container .swiper-button-next {
+        top: 120px;
+        right: 10px;
+    }
+
+    .vive {
+        bottom: 20px;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .tech-container {
+        padding: 0 50px;
+    }
+
+    .tech-main-container {
+        width: 90%;
+    }
+
+    .tech-title-container h1 {
+        font-size: 30px;
+    }
+
+    .tech-title-container h2 {
+        font-size: 26px;
+    }
+
+    .tech-container .slider_services {
+        top: 310px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    
+    .tech-container {
+        padding: 0 20px;
+    }
+    
+    .tech-title-container h1 {
+        font-size: 24px;
+    }
+    
+    .tech-title-container h2 {
+        font-size: 20px;
+    }
+    
+    .tech-container .slider_services {
+        top: 200px;
+        width: 300px;
+    }
+
+    .tech-container .swiper-slide img {
+        width: 55%;
+    }
+
+    .oculus {
+        bottom: -40px;
+    }
+
+    .vive {
+        bottom: -40px;
+    }
+
+    .unity {
+        bottom: -40px;
+    }
+}

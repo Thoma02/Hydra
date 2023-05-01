@@ -3,9 +3,53 @@ $paddingServicesTech: 0 78px 0 84px;
 $paddingProcess: 0 81px 0 87px;
 $paddingForm: 0 81px 0 84px;
 $paddingFooter: 0 84px 59px 86px;
+$colorButtons: #343045;
+
+@mixin fontButtons {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+@mixin fontHeader1 {
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+@mixin fontHeader2 {
+    font-weight: 300;
+    font-size: 28px;
+}
+
+@mixin fontText {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+@mixin circleButtons {
+    background: linear-gradient(251.27deg, #C0B7E8 12.87%, #8176AF 89.33%);
+    border-radius: 50%;
+    box-shadow: 0 0 0px 10px rgba(14, 14, 14, 0.32);
+    position: absolute;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
 }
+
+body {
+    background-color: #302c42;
+}
+
+button {
+    background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
+    border: none;
+    border-radius: 40px;
+    @include fontButtons;
+}
+

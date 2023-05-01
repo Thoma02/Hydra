@@ -1,4 +1,393 @@
+@import '../../App.scss';
+
 #hero-container {
     padding: 50px 84px;
     background-color: #302c42;
+}
+
+// Navbar and Logo
+
+#nav-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    margin-bottom: 100px;
+}
+
+#logo-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+a {
+    @include fontButtons;
+    text-decoration: none;
+    color: #fff;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 38px;
+}
+
+.join-hydra-button {
+    width: 154px;
+    height: 48px;
+}
+
+.contact-us-button {
+    background: transparent;
+    color: #fff;
+    width: 155px;
+    height: 48px;
+    border: 2px solid #fff;
+}
+
+.burger-menu {
+    position: relative;
+    width: 50px;
+    height: 40px;
+    display: none;
+    z-index: 2;
+}
+
+.burger-menu:hover {
+    cursor: pointer;
+}
+
+.line {
+    height: 7px;
+    position: absolute;
+    background-color: black;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    background: linear-gradient(90deg, #C0B7E8 -15.79%, #8176AF 100%);
+    border-radius: 40px;
+}
+
+.top {
+    width: 50px;
+    top: 0;
+    right: 0;
+    margin-bottom: 8px;
+}
+
+.middle {
+    width: 25px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.bottom {
+    width: 50px;
+    bottom: 0;
+    right: 0;
+}
+
+.clicked .middle {
+    transform: translate(-50%, -50%) translateX(-5px);
+    opacity: 0;
+}
+
+.clicked .line {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.clicked .line.top {
+    transform: translateY(16px) rotate(-45deg);
+}
+
+.clicked .line.bottom {
+    transform: translateY(-16px) rotate(45deg);
+}
+
+.dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #fff;
+    right: 0;
+    background: radial-gradient(50% 2900.76% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211E2E 100%);
+    padding: 20px 40px;
+    border-radius: 16px;
+}
+
+.nav-links-container-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.buttons-container-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.visible {
+    display: flex;
+    bottom: -230px;
+    transition: 1s ease;
+    animation: slide-in 0.5s ease-in-out;
+}
+
+.hidden {
+    display: none;
+    animation: slide-out 0.5s ease-in-out;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+// Header Section
+
+#header-container {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+#text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 45%;
+    color: #fff;
+}
+
+#text-container h1 {
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 36px;
+}
+
+#text-container h1 span {
+    color: #8176AF;
+}
+
+#buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+}
+
+#buttons-container button {
+    background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
+    width: 214px;
+    height: 48px;
+    border-radius: 40px;
+    border: none;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#text-container p {
+    margin-bottom: 40px;
+    line-height: 20px;
+}
+
+#image-container img {
+    width: 524px;
+    height: 455px;
+}
+
+
+
+// Contact Section
+
+#contact-us-child-container {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    background: radial-gradient(50% 2900.76% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211E2E 100%);
+    border-radius: 90px;
+    height: 167px;
+    color: #fff;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: #fff;
+}
+
+.divider {
+    width: 2px;
+    height: 116px;
+    background-color: #8176AF;
+    opacity: 0.4;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.contact-container p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    margin: 0;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+@media screen and(max-width: 1200px) {
+
+    #nav-container {
+        align-items: center;
+    }
+
+    .burger-menu {
+        display: inline;
+    }
+
+    .buttons-container {
+        display: none;
+    }
+
+    .nav-links-container {
+        display: none;
+    }
+
+    #contact-us-child-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    #header-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 50px;
+    }
+
+    #text-container {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    #text-container p,
+    #buttons-container>img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    #hero-container {
+        padding: 50px 40px;
+    }
+
+    // Header 768
+
+    #header-container {
+        margin-bottom: 80px;
+    }
+
+    #image-container {
+        width: 100%;
+    }
+
+    #image-container img {
+        width: 100%;
+        height: 100%;
+    }
+
+    // Contact 768
+
+    .contact-container {
+        gap: 10px;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    #logo-container img:first-child {
+        width: 80px;
+    }
+
+    #logo-container img:nth-child(2) {
+        width: 60px;
+    }
+
+    #nav-container {
+        margin-bottom: 50px;
+    }
+
+    #header-container {
+        margin-bottom: 50px;
+    }
+
+    #hero-container {
+        padding: 50px 25px;
+    }
+
+    .contact_slider {
+        height: 109px;
+    }
+
+    .contact-container {
+        width: 70%;
+    }
+
+    .info-container h2 {
+        display: none;
+    }
+
+    .contact_slider .swiper-button-prev {
+        top: 50px;
+    }
+
+    .contact_slider .swiper-button-next {
+        top: 50px;
+    }
 }

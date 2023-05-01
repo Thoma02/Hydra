@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../../assets/icons/Frame.svg";
 import group from "../../../assets/icons/Group.svg";
-import "./Nav.scss";
 
 export default function Nav() {
     const [clicked, setClicked] = useState(false);
