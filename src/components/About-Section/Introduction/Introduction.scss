@@ -1,48 +1,48 @@
-.introduction_container {
+.introduction-container {
     display: flex;
     justify-content: space-between;
     margin-bottom: 100px;
 }
 
-.title_container h1 {
+.title-container h1 {
     font-size: 36px;
     margin-bottom: 10px;
 }
 
-.title_container h2 {
+.title-container h2 {
     font-size: 28px;
     font-weight: 300;
 }
 
-.text_container {
+.text-container {
     width: 55%;
 }
 
-.introduction_container .text_container p {
+.introduction-container .text-container p {
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
 }
 
-.subtitle_container {
+.subtitle-container {
     display: flex;
     gap: 30px;
 }
 
-.arrow_container {
+.arrow-container {
     position: relative;
     display: flex;
     align-items: center;
 }
 
-.arrow_mid {
+.arrow-mid {
     width: 150px;
     height: 3px;
     background-color: #C0B7E8;
     border-radius: 8px;
 }
 
-.arrow_top {
+.arrow-top {
     position: absolute;
     top: 6px;
     right: -5px;
@@ -53,7 +53,7 @@
     border-radius: 8px;
 }
 
-.arrow_bottom {
+.arrow-bottom {
     position: absolute;
     top: 26px;
     right: -5px;

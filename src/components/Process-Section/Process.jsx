@@ -2,6 +2,7 @@ import React from "react";
 import "./Process.scss";
 import arrow from "../../assets/icons/arrow-small-right.svg";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import vector5 from "../../assets/vectors/vector-5.svg";
 import 'swiper/swiper-bundle.css';
 import SwiperCore, { Navigation } from 'swiper';
 SwiperCore.use([Navigation]);
@@ -9,19 +10,19 @@ SwiperCore.use([Navigation]);
 export default function Process() {
     return(
         <div className="process-container">
-            <div className="why_build_with_hydra_container">
-                <div className="title_container">
+            <div className="why-build-with-hydra-container">
+                <div className="title-container">
                     <h1>HOW WE BUILD</h1>
-                    <div className="subtitle_container">
+                    <div className="subtitle-container">
                         <h2>WITH HYDRA VR?</h2>
-                        <div className="arrow_container">
-                            <div className="arrow_top"></div>
-                            <div className="arrow_mid"></div>
-                            <div className="arrow_bottom"></div>
+                        <div className="arrow-container">
+                            <div className="arrow-top"></div>
+                            <div className="arrow-mid"></div>
+                            <div className="arrow-bottom"></div>
                         </div>
                     </div>
                 </div>
-                <div className="text_container">
+                <div className="text-container">
                     <p>
                         Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat 
                         nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo 
@@ -69,7 +70,7 @@ export default function Process() {
                 }}
                 loop={true}
                 cssMode={true}
-                className="slider_services"
+                className="slider-services"
                 >
                 <SwiperSlide className={`swiper-slide unreal`}>
                     <div className="process-box">
@@ -106,6 +107,7 @@ export default function Process() {
                 <div className="swiper-button-prev"></div>
                 <div className="swiper-button-next"></div>
             </Swiper>
+            <img className="vector-5" src={vector5} alt="" />
         </div>
     )
 }

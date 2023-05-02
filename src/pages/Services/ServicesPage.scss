@@ -1,0 +1,94 @@
+.services-page-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.services-page-container .why-build-with-hydra-container {
+    position: relative;
+    width: 100%;
+    height: 25%;
+    margin: 0;
+}
+
+.services-page-container .title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.services-page-container .boxes-container {
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    left: 0;
+    bottom: 0;
+    gap: 0;
+}
+
+.services-page-container .box-container:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.services-page-container .box-container {
+    width: 25%;
+    border-radius: 0;
+    opacity: 0.6;
+    height: 100%;
+    gap: 120px;
+    text-align: center;
+}
+
+.services-page-container .box-container:nth-child(1) {
+    border-right: 2px solid black;
+}
+
+.services-page-container .box-container:nth-child(2) {
+    border-right: 2px solid black;
+}
+
+.services-page-container .box-container:nth-child(3) {
+    border-right: 2px solid black;
+}
+
+.services-page-container .box-text-container {
+    position: relative;
+}
+
+.services-page-container .box-image {
+    position: relative;
+    box-shadow: 0 0 0 15px rgba(14, 14, 14, 0.5);
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+    .services-page-container .box-container {
+        flex-basis: 50%;
+    }
+
+    .services-page-container .box-container:nth-child(1) {
+        border-bottom: 2px solid black;
+    }
+    
+    .services-page-container .box-container:nth-child(2) {
+        border-bottom: 2px solid black;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .services-page-container .boxes-container {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .services-page-container .box-container {
+            flex-basis: 100%;
+    }
+}

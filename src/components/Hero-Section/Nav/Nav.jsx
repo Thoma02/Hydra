@@ -10,10 +10,10 @@ export default function Nav() {
     };
 
     const navLinks = [
-        { url: "#about-container", label: "ABOUT" },
-        { url: "#services-container", label: "SERVICES" },
-        { url: "#technologies-container", label: "TECHNOLOGIES" },
-        { url: "#process-container", label: "HOW TO" },
+        { url: "about", label: "ABOUT" },
+        { url: "services", label: "SERVICES" },
+        { url: "tech", label: "TECHNOLOGIES" },
+        { url: "process", label: "HOW TO" },
     ];
 
     return (
@@ -23,13 +23,9 @@ export default function Nav() {
                 <img src={group} alt="" />
             </div>
             <div className="nav-links-container">
-                {navLinks.map((link) => (
-                    <a href={link.url}>{link.label}</a>
+                {navLinks.map((link, index) => (
+                    <a key={index} href={link.url}>{link.label}</a>
                 ))}
-                {/* <a href="#about-container">ABOUT</a>
-                <a href="#services-container">SERVICES</a>
-                <a href="#technologies-container">TECHNOLOGIES</a>
-                <a href="#process-container">HOW TO</a> */}
             </div>
             <div className="buttons-container">
                 <button className="contact-us-button">CONTACT US</button>

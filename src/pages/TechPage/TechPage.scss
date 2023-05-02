@@ -1,0 +1,45 @@
+.tech-page-container {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+    left: 0;
+    // bottom: 0;
+    // right: 0;
+}
+
+.tech-page-container .tech-title-container {
+    position: absolute;
+    top: 100px;
+}
+
+.tech-page-container .banner {
+    position: relative;
+    left: -15%;
+    top: 0;
+    width: 130%;
+}
+
+.tech-page-container .tech-boxes-container {
+    justify-content: center;
+    gap: 50px;
+}
+
+.tech-page-container .tech-boxes-container img:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 992px) {
+
+    .tech-page-container .tech-boxes-container {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .tech-page-container .tech-boxes-container img{
+        flex-basis: 60%;
+    }
+}

@@ -1,12 +1,14 @@
 import React from "react";
 import "./AboutHydra.scss";
 import HydraImg from "../../../assets/images/about_image.svg";
+import vector2 from "../../../assets/vectors/vector-2.svg";
+import vector3 from "../../../assets/vectors/vector-3.svg";
 
 export default function AboutHydra() {
     return (
-        <div className="about_hydra_container">
+        <div className="about-hydra-container">
             <img src={HydraImg} alt="" />
-            <div className="about_text_container">
+            <div className="about-text-container">
                 <h1>ABOUT</h1>
                 <h2>HYDRA VR</h2>
                 <p>
@@ -22,6 +24,8 @@ export default function AboutHydra() {
                 </p>
                 <button>LET’S GET IN TOUCH</button>
             </div>
+            <img className="vector-2" src={vector2} alt="" />
+            <img className="vector-3" src={vector3} alt="" />
         </div>
     )
 }

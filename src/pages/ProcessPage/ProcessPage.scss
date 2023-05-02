@@ -1,0 +1,77 @@
+@import "../../App.scss";
+
+.process-page-container {
+    padding: 40px 80px;
+}
+
+.process-header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+    text-align: center
+}
+
+.process-header-container p {
+    font-size: 22px;
+}
+
+.process-header-container h1 {
+    @include fontHeader1;
+}
+
+.process-header-container h2 {
+    @include fontHeader2;
+    margin-bottom: 15px;
+}
+
+.process-step-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    background: radial-gradient(50% 2900.76% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211E2E 100%);
+    border-radius: 20px;
+    padding: 30px 70px;
+}
+
+.process-step-container h3 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.step-info {
+    position: relative;
+}
+
+.step-info p {
+    font-size: 22px;
+}
+
+.process-circle {
+    margin-bottom: 10px;
+}
+
+.left {
+    float: left;
+    margin-right: 20px;
+}
+
+.right {
+    float: right;
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .process-page-container {
+        padding: 40px 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .process-page-container {
+        padding: 40px 20px;
+    }
+}

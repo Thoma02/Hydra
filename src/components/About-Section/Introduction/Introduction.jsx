@@ -3,19 +3,19 @@ import "./Introduction.scss";
 
 export default function Introduction() {
     return (
-        <div className="introduction_container">
-            <div className="title_container">
+        <div className="introduction-container">
+            <div className="title-container">
                 <h1>Introduction</h1>
-                <div className="subtitle_container">
+                <div className="subtitle-container">
                     <h2>TO HYDRA VR</h2>
-                    <div className="arrow_container">
-                        <div className="arrow_top"></div>
-                        <div className="arrow_mid"></div>
-                        <div className="arrow_bottom"></div>
+                    <div className="arrow-container">
+                        <div className="arrow-top"></div>
+                        <div className="arrow-mid"></div>
+                        <div className="arrow-bottom"></div>
                     </div>
                 </div>
             </div>
-            <div className="text_container">
+            <div className="text-container">
                 <p>
                     Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat 
                     nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo 

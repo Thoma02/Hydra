@@ -1,12 +1,14 @@
 @import '../../App.scss';
 
 .footer-parent-container {
+    position: relative;
     padding: 0 90px 0;
     max-width: 1800px;
     margin: 0 auto;
 }
 
 .footer-container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,6 +16,7 @@
     margin-bottom: 70px;
     font-size: 16px;
     font-weight: 700;
+    z-index: 1;
 }
 
 .footer-links-container {
@@ -66,6 +69,22 @@
     margin-bottom: 60px;
 }
 
+.vector-6 {
+    position: absolute;
+    right: 0;
+    top: -180px;
+    width: 100%;
+    z-index: 0;
+}
+
+.vector-7 {
+    position: absolute;
+    right: 0;
+    top: -80px;
+    width: 100%;
+    z-index: 0;
+}
+
 @media screen and (max-width: 992px) {
 
     .footer-container {
@@ -88,6 +107,14 @@
 
     .footer-socialize-container {
         align-items: center;
+    }
+
+    .vector-6 {
+        display: none;
+    }
+    
+    .vector-7 {
+        display: none;
     }
 }
 

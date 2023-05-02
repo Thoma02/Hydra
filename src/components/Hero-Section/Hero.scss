@@ -13,6 +13,7 @@
     justify-content: space-between;
     font-weight: 700;
     margin-bottom: 100px;
+    z-index: 3;
 }
 
 #logo-container {
@@ -130,8 +131,12 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     margin-bottom: 20px;
+}
+
+.nav-links-container-mobile a {
+    font-size: 20px;
 }
 
 .buttons-container-mobile {
@@ -140,9 +145,15 @@ a {
     gap: 10px;
 }
 
+.buttons-container-mobile button {
+    width: 100%;
+    height: 54px;
+    font-size: 18px;
+}
+
 .visible {
     display: flex;
-    bottom: -230px;
+    bottom: -290px;
     transition: 1s ease;
     animation: slide-in 0.5s ease-in-out;
 }
@@ -182,12 +193,14 @@ a {
 }
 
 #text-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     width: 45%;
     color: #fff;
+    z-index: 1;
 }
 
 #text-container h1 {
@@ -223,8 +236,10 @@ a {
 }
 
 #image-container img {
+    position: relative;
     width: 524px;
     height: 455px;
+    z-index: 2;
 }
 
 
@@ -232,6 +247,7 @@ a {
 // Contact Section
 
 #contact-us-child-container {
+    position: relative;
     font-family: 'Montserrat', sans-serif;
     display: flex;
     align-items: center;
@@ -241,6 +257,7 @@ a {
     border-radius: 90px;
     height: 167px;
     color: #fff;
+    z-index: 1;
 }
 
 .contact-container {
@@ -275,6 +292,23 @@ h2 {
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+}
+
+.vector-cluster {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 670px;
+    height: 770px;
+    z-index: 0;
+}
+
+.vector-1 {
+    position: absolute;
+    left: 0;
+    width: 320px;
+    height: 750px;
+    z-index: 0;
 }
 
 @media screen and(max-width: 1200px) {
@@ -318,6 +352,17 @@ h2 {
     #buttons-container>img {
         display: none;
     }
+
+    .vector-1 {
+        display: none;
+    }
+
+    .vector-cluster {
+        left: 50%;
+        transform: translateX(-50%);
+        // width: 70%;
+        // height: auto;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -346,6 +391,14 @@ h2 {
     .contact-container {
         gap: 10px;
         width: 80%;
+    }
+
+    .vector-cluster {
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: auto;
     }
 }
 

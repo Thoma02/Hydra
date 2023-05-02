@@ -1,31 +1,31 @@
-.about_container {
+.about-container {
     padding: 30px 84px;
-    max-width: 1600px;
+    max-width: 1800px;
     margin: 0 auto;
 }
 
 @media screen and (max-width: 1200px) {
-    .text_container {
+    .text-container {
         width: 50%;
     }
 }
 
 @media screen and (max-width: 992px) {
-    .text_container {
+    .text-container {
         display: none;
     }
 
-    .arrow_container {
+    .arrow-container {
         display: none;
     }
 
-    .about_hydra_container {
+    .about-hydra-container {
         flex-direction: column;
         align-items: center;
         gap: 51px;
     }
 
-    .about_text_container {
+    .about-text-container {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -33,44 +33,44 @@
         margin: 0;
     }
 
-    .about_text_container h1, .about_text_container h2 {
+    .about-text-container h1, .about-text-container h2 {
         display: none;
     }
 
-    .about_text_container p {
+    .about-text-container p {
         margin-bottom: 34px;
     }
 
-    .introduction_container {
+    .introduction-container {
         justify-content: center;
         margin-bottom: 36px;
     }
 
-    .subtitle_container {
+    .subtitle-container {
         justify-content: center;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .about_container {
+    .about-container {
         padding: 23px 30px;
     }
 
-    .about_hydra_container {
+    .about-hydra-container {
         gap: 30px;
     }
 
-    .about_text_container {
+    .about-text-container {
         width: 100%;
     }
 
-    .about_hydra_container img {
+    .about-hydra-container img {
         width: 100%;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .about_text_container button {
+    .about-text-container button {
             width: 80%;
     }
 }

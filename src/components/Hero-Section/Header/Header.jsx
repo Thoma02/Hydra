@@ -1,6 +1,8 @@
 import React from "react";
 import arrow from "../../../assets/icons/arrow-small-right.svg";
 import image from "../../../assets/images/hero-image.png";
+import vectorCluster from "../../../assets/vectors/vector-cluster.png";
+import vector1 from "../../../assets/vectors/vector-1.svg";
 
 export default function Header() {
     return (
@@ -19,6 +21,8 @@ export default function Header() {
             <div id="image-container">
                 <img src={image} alt="" />
             </div>
+            <img className="vector-cluster" src={vectorCluster} alt="" />
+            <img className="vector-1" src={vector1} alt="" />
         </div>
     )
 }

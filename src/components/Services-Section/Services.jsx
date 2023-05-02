@@ -3,8 +3,9 @@ import "./Services.scss";
 import shadow from "../../assets/icons/shadow.svg";
 import simulationImg from "../../assets/images/simulation.svg";
 import educationImg from "../../assets/images/education.svg";
-import selfCareImg from "../../assets/images/self_care.svg";
+import selfCareImg from "../../assets/images/self-care.svg";
 import outdoorImg from "../../assets/images/outdoor.svg";
+import vector4 from "../../assets/vectors/vector-4.svg";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import SwiperCore, { Navigation } from 'swiper';
@@ -12,20 +13,20 @@ SwiperCore.use([Navigation]);
 
 export default function Services() {
     return (
-        <div className="services_container">
-            <div className="why_build_with_hydra_container">
-                <div className="title_container">
+        <div className="services-container">
+            <div className="why-build-with-hydra-container">
+                <div className="title-container">
                     <h1>WHY BUILD</h1>
-                    <div className="subtitle_container">
+                    <div className="subtitle-container">
                         <h2>WITH HYDRA</h2>
-                        <div className="arrow_container">
-                            <div className="arrow_top"></div>
-                            <div className="arrow_mid"></div>
-                            <div className="arrow_bottom"></div>
+                        <div className="arrow-container">
+                            <div className="arrow-top"></div>
+                            <div className="arrow-mid"></div>
+                            <div className="arrow-bottom"></div>
                         </div>
                     </div>
                 </div>
-                <div className="text_container">
+                <div className="text-container">
                     <p>
                         Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat 
                         nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo 
@@ -34,13 +35,13 @@ export default function Services() {
                     </p>
                 </div>
             </div>
-            <div className="boxes_container">
-                <div className="box_container">
+            <div className="boxes-container">
+                <div className="box-container">
                     <img className="shadow" src={shadow} alt="" />
-                    <img className="box_image" src={simulationImg} alt="" />
-                    <div className="box_text_container">
+                    <img className="box-image" src={simulationImg} alt="" />
+                    <div className="box-text-container">
                          <h3>SIMULATION</h3>
-                        <div className="box_divider"></div>
+                        <div className="box-divider"></div>
                         <p>
                             Vitae sapien pellentesque habitant morbi
                             nunc. Viverra aliquet  porttitor rhoncus 
@@ -49,12 +50,12 @@ export default function Services() {
                         <button>TRY IT NOW</button>
                     </div>
                 </div>
-                <div className="box_container">
+                <div className="box-container">
                     <img className="shadow" src={shadow} alt="" />
-                    <img className="box_image" src={educationImg} alt="" />
-                    <div className="box_text_container">
-                         <h3>SIMULATION</h3>
-                        <div className="box_divider"></div>
+                    <img className="box-image" src={educationImg} alt="" />
+                    <div className="box-text-container">
+                         <h3>EDUCATION</h3>
+                        <div className="box-divider"></div>
                         <p>
                             Vitae sapien pellentesque habitant morbi
                             nunc. Viverra aliquet  porttitor rhoncus 
@@ -63,12 +64,12 @@ export default function Services() {
                         <button>TRY IT NOW</button>
                     </div>
                 </div>
-                <div className="box_container">
+                <div className="box-container">
                     <img className="shadow" src={shadow} alt="" />
-                    <img className="box_image" src={selfCareImg} alt="" />
-                    <div className="box_text_container">
-                         <h3>SIMULATION</h3>
-                        <div className="box_divider"></div>
+                    <img className="box-image" src={selfCareImg} alt="" />
+                    <div className="box-text-container">
+                         <h3>SELF-CARE</h3>
+                        <div className="box-divider"></div>
                         <p>
                             Vitae sapien pellentesque habitant morbi
                             nunc. Viverra aliquet  porttitor rhoncus 
@@ -77,12 +78,12 @@ export default function Services() {
                         <button>TRY IT NOW</button>
                     </div>
                 </div>
-                <div className="box_container">
+                <div className="box-container">
                     <img className="shadow" src={shadow} alt="" />
-                    <img className="box_image" src={outdoorImg} alt="" />
-                   <div className="box_text_container">
-                         <h3>SIMULATION</h3>
-                        <div className="box_divider"></div>
+                    <img className="box-image" src={outdoorImg} alt="" />
+                   <div className="box-text-container">
+                         <h3>OUTDOOR</h3>
+                        <div className="box-divider"></div>
                         <p>
                             Vitae sapien pellentesque habitant morbi
                             nunc. Viverra aliquet  porttitor rhoncus 
@@ -101,15 +102,15 @@ export default function Services() {
                 }}
                 loop={true}
                 cssMode={true}
-                className="slider_services"
+                className="slider-services"
                 >
                 <SwiperSlide className={`swiper-slide`}>
-                    <div className="box_container">
+                    <div className="box-container">
                         <img className="shadow" src={shadow} alt="" />
-                        <img className="box_image" src={simulationImg} alt="" />
-                        <div className="box_text_container">
+                        <img className="box-image" src={simulationImg} alt="" />
+                        <div className="box-text-container">
                             <h3>SIMULATION</h3>
-                            <div className="box_divider"></div>
+                            <div className="box-divider"></div>
                             <p>
                                 Vitae sapien pellentesque habitant morbi
                                 nunc. Viverra aliquet  porttitor rhoncus 
@@ -120,12 +121,12 @@ export default function Services() {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className={`swiper-slide`}>
-                    <div className="box_container">
+                    <div className="box-container">
                         <img className="shadow" src={shadow} alt="" />
-                        <img className="box_image" src={selfCareImg} alt="" />
-                        <div className="box_text_container">
-                            <h3>SIMULATION</h3>
-                            <div className="box_divider"></div>
+                        <img className="box-image" src={selfCareImg} alt="" />
+                        <div className="box-text-container">
+                            <h3>EDUCATION</h3>
+                            <div className="box-divider"></div>
                             <p>
                                 Vitae sapien pellentesque habitant morbi
                                 nunc. Viverra aliquet  porttitor rhoncus 
@@ -136,12 +137,28 @@ export default function Services() {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className={`swiper-slide`}>
-                    <div className="box_container">
+                    <div className="box-container">
                         <img className="shadow" src={shadow} alt="" />
-                        <img className="box_image" src={outdoorImg} alt="" />
-                    <div className="box_text_container">
-                            <h3>SIMULATION</h3>
-                            <div className="box_divider"></div>
+                        <img className="box-image" src={outdoorImg} alt="" />
+                    <div className="box-text-container">
+                            <h3>SELF-CARE</h3>
+                            <div className="box-divider"></div>
+                            <p>
+                                Vitae sapien pellentesque habitant morbi
+                                nunc. Viverra aliquet  porttitor rhoncus 
+                                libero justo laoreet sit amet vitae.
+                            </p>
+                            <button>TRY IT NOW</button>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className={`swiper-slide`}>
+                    <div className="box-container">
+                        <img className="shadow" src={shadow} alt="" />
+                        <img className="box-image" src={outdoorImg} alt="" />
+                    <div className="box-text-container">
+                            <h3>OUTDOOR</h3>
+                            <div className="box-divider"></div>
                             <p>
                                 Vitae sapien pellentesque habitant morbi
                                 nunc. Viverra aliquet  porttitor rhoncus 
@@ -154,6 +171,7 @@ export default function Services() {
                 <div className="swiper-button-prev"></div>
                 <div className="swiper-button-next"></div>
             </Swiper>
+            <img className="vector-4" src={vector4} alt="" />
         </div>
     )
 }

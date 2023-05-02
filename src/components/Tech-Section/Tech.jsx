@@ -51,10 +51,10 @@ export default function Tech() {
                 </div>
             </div>
             <div className={`tech-boxes-container ${displayed ? '' : 'hidden'}`}>
-                <img src={unreal} alt="" />
-                <img src={unity} alt="" />
-                <img src={oculus} alt="" />
-                <img src={vive} alt="" />
+                <a href="https://www.unrealengine.com/en-US" target="blank"><img src={unreal} alt="" /></a>
+                <a href="https://unity.com/" target="blank"><img src={unity} alt="" /></a>
+                <a href="https://www.oculus.com/experiences/quest/" target="blank"><img src={oculus} alt="" /></a>
+                <a href="https://www.vive.com/de/" target="blank"><img src={vive} alt="" /></a>
             </div>
             <Swiper
                 spaceBetween={50}
@@ -65,7 +65,7 @@ export default function Tech() {
                 }}
                 loop={true}
                 cssMode={true}
-                className="slider_services"
+                className="slider-services"
                 >
                 <SwiperSlide className={`swiper-slide unreal`}>
                     <img src={unreal} alt="" />

@@ -1,0 +1,25 @@
+@import '../../App.scss';
+
+.about-page {
+    padding: 40px 80px;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.about-page h1 {
+    @include fontHeader1;
+    text-align: center;
+}
+
+.about-page h2 {
+    @include fontHeader2;
+    margin-bottom: 42px;
+    text-align: center;
+}
+
+.about-page .about-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}

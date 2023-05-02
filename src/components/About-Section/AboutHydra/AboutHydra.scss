@@ -1,34 +1,56 @@
 @import '../../../App.scss';
 
-.about_hydra_container {
+.about-hydra-container {
+    position: relative;
     display: flex;
     justify-content: space-between;
 }
 
-.about_text_container {
+.about-hydra-container img:first-of-type {
+    position: relative;
+    z-index: 1;
+}
+
+.about-text-container {
     width: 50%;
 }
 
-.about_text_container {
+.about-text-container {
     margin-left: 20px
 }
 
-.about_text_container h1 {
+.about-text-container h1 {
     @include fontHeader1;
 }
 
-.about_text_container h2 {
+.about-text-container h2 {
     @include fontHeader2;
     margin-bottom: 42px
 }
 
-.about_text_container p {
+.about-text-container p {
     @include fontText;
     margin-bottom: 28px;
 }
 
-.about_text_container button {
+.about-text-container button {
     width: 214px;
     height: 48px;
     background-color: $colorButtons; 
+}
+
+.vector-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+.vector-3 {
+    position: absolute;
+    top: 300px;
+    left: 0;
+    width: 100%;
+    z-index: 0;
 }

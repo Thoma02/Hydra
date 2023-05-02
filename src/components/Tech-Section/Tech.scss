@@ -127,7 +127,7 @@
         top: 0;
     }
     100% {
-        top: -300px;
+        top: -260px;
     }
 }
 
@@ -167,14 +167,23 @@
 @media screen and (max-width: 1200px) {
 
     .tech-boxes-container {
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 50px;
         animation: showMobile 1s ease-in-out forwards;
     }
 
-    .tech-boxes-container img {
+    .tech-boxes-container a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         flex-basis: 35%;
+    }
+
+    .tech-boxes-container img:hover {
+        transform: scale(1.1);
+        transition: all 0.2s ease-in-out;
     }
 
     .hidden {
