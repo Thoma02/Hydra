@@ -8,6 +8,7 @@ $colorButtons: #343045;
 @mixin fontButtons {
     font-size: 12px;
     font-weight: 700;
+    color: #343045;
 }
 
 @mixin fontHeader1 {
@@ -47,6 +48,13 @@ body {
 }
 
 button {
+    background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
+    border: none;
+    border-radius: 40px;
+    @include fontButtons;
+}
+
+@mixin buttons {
     background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
     border: none;
     border-radius: 40px;

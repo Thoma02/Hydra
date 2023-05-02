@@ -9,6 +9,13 @@ export default function Nav() {
         setClicked(!clicked);
     };
 
+    const navLinks = [
+        { url: "#about-container", label: "ABOUT" },
+        { url: "#services-container", label: "SERVICES" },
+        { url: "#technologies-container", label: "TECHNOLOGIES" },
+        { url: "#process-container", label: "HOW TO" },
+    ];
+
     return (
         <div id="nav-container">
             <div id="logo-container">
@@ -16,10 +23,13 @@ export default function Nav() {
                 <img src={group} alt="" />
             </div>
             <div className="nav-links-container">
-                <a href="#about-container">ABOUT</a>
+                {navLinks.map((link) => (
+                    <a href={link.url}>{link.label}</a>
+                ))}
+                {/* <a href="#about-container">ABOUT</a>
                 <a href="#services-container">SERVICES</a>
                 <a href="#technologies-container">TECHNOLOGIES</a>
-                <a href="#process-container">HOW TO</a>
+                <a href="#process-container">HOW TO</a> */}
             </div>
             <div className="buttons-container">
                 <button className="contact-us-button">CONTACT US</button>
@@ -32,10 +42,9 @@ export default function Nav() {
             </div>
             <div className={`dropdown ${clicked ? 'visible' : 'hidden'}`}>
                 <div className="nav-links-container-mobile">
-                    <a href="#about-container">ABOUT</a>
-                    <a href="#services-container">SERVICES</a>
-                    <a href="#technologies-container">TECHNOLOGIES</a>
-                    <a href="#process-container">HOW TO</a>
+                        {navLinks.map((link) => (
+                            <a href={link.url}>{link.label}</a>
+                        ))}
                 </div>
                 <div className="buttons-container-mobile">
                     <button className="contact-us-button">CONTACT US</button>

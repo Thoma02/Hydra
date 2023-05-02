@@ -10,17 +10,18 @@
     padding: 0 78px 0 84px;
     max-width: 1800px;
     margin: 0 auto 69px;
-    min-height: 500px;
+    // min-height: 500px;
     // min-width: 100%;
 }
 
 .tech-main-container {
-    position: absolute;
-    top: 0;
-    width: calc(100% - 162px);
+    position: relative;
+    // top: 0;
+    // width: calc(100% - 162px);
     z-index: 2;
-    left: 50%;
-    transform: translateX(-50%);
+    // left: 50%;
+    // transform: translateX(-50%);
+    width: 100%;
 }
 
 .tech-main-container img {
@@ -99,10 +100,11 @@
 .tech-boxes-container {
     display: flex;
     justify-content: space-between;
-    position: absolute;
-    width: calc(100% - 162px);
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    // width: calc(100% - 162px);
+    width: 100%;
+    // left: 50%;
+    // transform: translateX(-50%);
     animation: show 1s ease-in-out forwards;
 }
 
@@ -122,44 +124,42 @@
 
 @keyframes hide {
     0% {
-        top: 320px;
+        top: 0;
     }
     100% {
-        top: -10px;
+        top: -300px;
     }
 }
 
 @keyframes hideMobile {
     0% {
-        top: 320px;
+        top: 0;
         scale: 1;
     }
 
     100% {
-        top: -200px;
-        left: 100px;
+        top: -500px;
         scale: 0;
     }
 }
 
 @keyframes show {
     0% {
-        top: -10px;
+        top: -300px;
     }
     100% {
-        top: 320px;
+        top: 0px;
     }
 }
 
 @keyframes showMobile {
     0% {
-        top: -200px;
-        left: 100px;
+        top: -500px;
         scale: 0;
     }
 
     100% {
-        top: 320px;
+        top: 0;
         scale: 1;
     }
 }
@@ -193,10 +193,10 @@
     }
 
     .tech-container .slider_services {
-        position: absolute;
-        top: calc(380px);
-        left: 50%;
-        transform: translateX(-50%);
+        // position: absolute;
+        // top: calc(380px);
+        // left: 50%;
+        // transform: translateX(-50%);
         width: 400px;
     }
 
@@ -220,11 +220,7 @@
 @media screen and (max-width: 768px) {
 
     .tech-container {
-        padding: 0 50px;
-    }
-
-    .tech-main-container {
-        width: 90%;
+        padding: 0 40px;
     }
 
     .tech-title-container h1 {
@@ -233,10 +229,6 @@
 
     .tech-title-container h2 {
         font-size: 26px;
-    }
-
-    .tech-container .slider_services {
-        top: 310px;
     }
 }
 
@@ -255,8 +247,8 @@
     }
     
     .tech-container .slider_services {
-        top: 200px;
-        width: 300px;
+        width: 100%;
+        padding-bottom: 20px;
     }
 
     .tech-container .swiper-slide img {

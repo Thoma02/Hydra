@@ -1,0 +1,97 @@
+@import '../../App.scss';
+
+.process-container {
+    padding: 0 81px 0 87px;
+    margin-bottom: 112px;
+}
+
+.process-boxes-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.process-circle {
+    @include circleButtons;
+    position: relative;
+    width: 160px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+    font-weight: 700;
+    color: #343045;
+}
+
+.process-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    max-width: 250px;
+}
+
+.process-box-info {
+    display: flex;
+    align-items: flex-end;
+}
+
+.process-box-info h3 {
+    vertical-align: bottom;
+    margin-bottom: 35px;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0px 10px rgba(14, 14, 14, 0.32);
+    }
+    50% {
+        box-shadow: 0 0 0 20px rgba(14, 14, 14, 0);
+    }
+    100% {
+        box-shadow: 0 0 0px 10px rgba(14, 14, 14, 0.32);
+    }
+}
+
+.process-circle:hover {
+    cursor: pointer;
+    animation: pulse 1s infinite;
+}
+
+@media screen and (max-width: 1200px) {
+    .process-boxes-container {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 140px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .process-boxes-container {
+        display: none;
+    }
+
+    .process-container .slider_services {
+        height: 320px;
+    }
+
+    .process-container h1,
+    .process-container h2,
+    .process-container h3 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .process-container {
+        padding: 0 20px;
+    }
+
+    .process-circle {
+        width: 120px;
+        height: 120px;
+        font-size: 48px;
+    }
+}

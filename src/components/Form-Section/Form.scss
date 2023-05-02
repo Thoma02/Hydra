@@ -1,0 +1,162 @@
+@import '../../App.scss';
+
+@mixin inputs {
+    background: transparent;
+    border: 2px solid #FFFFFF;
+    border-radius: 40px;
+    color: #FFFFFF;
+    padding: 20px 35px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:calc(100% - 160px);
+    background: radial-gradient(50% 50% at 50% 50%, #403A5F 0%, #211E2E 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+    padding: 90px 110px 84px;
+    max-width: 1800px;
+    margin: 0 auto 122px;; 
+}
+
+.form-container h1 {
+    @include fontHeader1;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-container h2 {
+    @include fontHeader2;
+    margin-bottom: 65px;
+    text-align: center;
+}
+
+.form-divider {
+    width: 414px;
+    height: 2px;
+    background: linear-gradient(to right,#312d47, #C0B7E8, #312c47);
+    opacity: 0.6;
+    margin-bottom: 20px;
+}
+
+.form-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.input-container input {
+    width: 49%;
+    height: 72px;
+    @include inputs;
+}
+
+.input-container:first-of-type {
+    margin-bottom: 40px;
+}
+
+.input-container:last-of-type {
+    margin-bottom: 30px;
+}
+
+.input-container input::placeholder {
+    color: #FFFFFF;
+}
+
+.subject::placeholder {
+    color: #FFFFFF;
+}
+
+.subject {
+    width: 100%;
+    @include inputs;
+    margin-bottom: 30px;
+}
+
+textarea {
+    width: 100%;
+    height: 210px;
+    @include inputs;
+    resize: none;
+    margin-bottom: 50px;
+}
+
+textarea::placeholder {
+    color: #FFFFFF;
+}
+
+.submit {
+    width: 214px;
+    height: 48px;
+    @include fontButtons;
+    @include buttons;
+}
+
+@media screen and (max-width: 768px) {
+
+    .form-container {
+        padding: 90px 40px 84px;
+    }
+
+    .form-container h1 {
+        font-size: 30px;
+    }
+
+    .form-container h2 {
+        margin-bottom: 36px;
+        font-size: 22px;
+    }
+
+    .input-container {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .input-container input {
+        width: 100%;
+        margin-bottom: 22px;
+    }
+
+    .input-container:first-of-type {
+        margin: 0;
+    }
+
+    .input-container:last-of-type {
+        margin: 0;
+    }
+
+    .subject {
+        margin-bottom: 22px;
+    }
+
+    .form-divider {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .form-container {
+        padding: 90px 20px 84px;
+        width: calc(100% - 40px);
+    }
+    
+    .form-container h1 {
+        font-size: 24px;
+    }
+    
+    .form-container h2 {
+        font-size: 22px;
+    }
+}
