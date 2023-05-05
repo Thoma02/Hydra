@@ -1,4 +1,5 @@
 import React from "react";
+import Arrow from "../../reusable-components/Arrow/Arrow";
 import "./Introduction.scss";
 
 export default function Introduction() {
@@ -8,11 +9,7 @@ export default function Introduction() {
                 <h1>Introduction</h1>
                 <div className="subtitle-container">
                     <h2>TO HYDRA VR</h2>
-                    <div className="arrow-container">
-                        <div className="arrow-top"></div>
-                        <div className="arrow-mid"></div>
-                        <div className="arrow-bottom"></div>
-                    </div>
+                    <Arrow />
                 </div>
             </div>
             <div className="text-container">

@@ -1,13 +1,11 @@
 import React from "react";
 import "./Process.scss";
-import arrow from "../../assets/icons/arrow-small-right.svg";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { slidesProcess } from "../../utils/slides";
 import vector5 from "../../assets/vectors/vector-5.svg";
-import 'swiper/swiper-bundle.css';
-import SwiperCore, { Navigation } from 'swiper';
-SwiperCore.use([Navigation]);
+import SliderProcess from "./SliderProcess/SliderProcess";
 
 export default function Process() {
+
     return(
         <div className="process-container">
             <div className="why-build-with-hydra-container">
@@ -32,81 +30,17 @@ export default function Process() {
                 </div>
             </div>
             <div className="process-boxes-container">
-                <div className="process-box">
-                    <div className="process-circle">01</div>
-                    <div className="process-box-info">
-                        <img src={arrow} alt="" />
-                        <h3>3D Conception & Design</h3>
+                {slidesProcess.map((slide, index) => (
+                    <div className="process-box" key={index}>
+                        <div className="process-circle">{slide.stepNumber}</div>
+                        <div className="process-box-info">
+                            <img src={slide.image} alt={slide.imageDescription} />
+                            <h3>{slide.title}</h3>
+                        </div>
                     </div>
-                </div>
-                <div className="process-box">
-                    <div className="process-circle">02</div>
-                    <div className="process-box-info">
-                        <img src={arrow} alt="" />
-                        <h3>Interaction Design</h3>
-                    </div>
-                </div>
-                <div className="process-box">
-                    <div className="process-circle">03</div>
-                    <div className="process-box-info">
-                        <img src={arrow} alt="" />
-                        <h3>VR World User Testing</h3>
-                    </div>
-                </div>
-                <div className="process-box">
-                    <div className="process-circle">04</div>
-                    <div className="process-box-info">
-                        <img src={arrow} alt="" />
-                        <h3>Hydra VR Deploy</h3>
-                    </div>
-                </div>
+                ))}
             </div>
-            <Swiper
-                spaceBetween={50}
-                slidesPerView={1}
-                navigation={{
-                    prevEl: '.swiper-button-prev',
-                    nextEl: '.swiper-button-next',
-                }}
-                loop={true}
-                cssMode={true}
-                className="slider-services"
-                >
-                <SwiperSlide className={`swiper-slide unreal`}>
-                    <div className="process-box">
-                        <div className="process-circle">01</div>
-                        <div className="process-box-info">
-                            <h3>3D Conception & Design</h3>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className={`swiper-slide unity`}>
-                    <div className="process-box">
-                        <div className="process-circle">02</div>
-                        <div className="process-box-info">
-                            <h3>Interaction Design</h3>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className={`swiper-slide oculus`}>
-                    <div className="process-box">
-                        <div className="process-circle">03</div>
-                        <div className="process-box-info">
-                            <h3>VR World User Testing</h3>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className={`swiper-slide vive`}>
-                    <div className="process-box">
-                        <div className="process-circle">04</div>
-                        <div className="process-box-info">
-                            <h3>Hydra VR Deploy</h3>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <div className="swiper-button-prev"></div>
-                <div className="swiper-button-next"></div>
-            </Swiper>
+            <SliderProcess />
             <img className="vector-5" src={vector5} alt="" />
         </div>
     )

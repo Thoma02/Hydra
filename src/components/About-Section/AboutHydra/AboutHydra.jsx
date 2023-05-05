@@ -1,13 +1,13 @@
 import React from "react";
-import "./AboutHydra.scss";
-import HydraImg from "../../../assets/images/about_image.svg";
+import aboutImg from "../../../assets/images/about_image.svg";
 import vector2 from "../../../assets/vectors/vector-2.svg";
 import vector3 from "../../../assets/vectors/vector-3.svg";
+import "./AboutHydra.scss";
 
 export default function AboutHydra() {
     return (
         <div className="about-hydra-container">
-            <img src={HydraImg} alt="" />
+            <img src={aboutImg} alt="A man wearing a VR headset" />
             <div className="about-text-container">
                 <h1>ABOUT</h1>
                 <h2>HYDRA VR</h2>

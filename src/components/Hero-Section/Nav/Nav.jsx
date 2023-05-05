@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { navSiteLinks } from "../../../utils/links";
 import logo from "../../../assets/icons/Frame.svg";
 import group from "../../../assets/icons/Group.svg";
+import DropdownMenu from "./DropdownMenu/DropdownMenu";
 
 export default function Nav() {
     const [clicked, setClicked] = useState(false);
@@ -9,13 +11,6 @@ export default function Nav() {
         setClicked(!clicked);
     };
 
-    const navLinks = [
-        { url: "about", label: "ABOUT" },
-        { url: "services", label: "SERVICES" },
-        { url: "tech", label: "TECHNOLOGIES" },
-        { url: "process", label: "HOW TO" },
-    ];
-
     return (
         <div id="nav-container">
             <div id="logo-container">
@@ -23,7 +18,7 @@ export default function Nav() {
                 <img src={group} alt="" />
             </div>
             <div className="nav-links-container">
-                {navLinks.map((link, index) => (
+                {navSiteLinks.map((link, index) => (
                     <a key={index} href={link.url}>{link.label}</a>
                 ))}
             </div>
@@ -36,17 +31,7 @@ export default function Nav() {
                 <div class="line middle"></div>
                 <div class="line bottom"></div>
             </div>
-            <div className={`dropdown ${clicked ? 'visible' : 'hidden'}`}>
-                <div className="nav-links-container-mobile">
-                        {navLinks.map((link) => (
-                            <a href={link.url}>{link.label}</a>
-                        ))}
-                </div>
-                <div className="buttons-container-mobile">
-                    <button className="contact-us-button">CONTACT US</button>
-                    <button className="join-hydra-button">JOIN HYDRA</button>
-                </div>
-            </div>
+            <DropdownMenu clicked={clicked}/>
         </div>
     );
 }
