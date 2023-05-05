@@ -1,6 +1,4 @@
 import React from "react";
-import Services from "../../components/Services-Section/Services";
-import shadow from "../../assets/icons/shadow.svg";
 import simulationImg from "../../assets/images/simulation.svg";
 import educationImg from "../../assets/images/education.svg";
 import selfCareImg from "../../assets/images/self-care.svg";

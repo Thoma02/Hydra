@@ -1,8 +1,9 @@
 import React from "react";
+import randomKey from "../../../utils/randomKey";
 import shadow from "../../../assets/icons/shadow.svg";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
 import SwiperCore, { Navigation } from 'swiper';
+import 'swiper/swiper-bundle.css';
 SwiperCore.use([Navigation]);
 
 export default function ServicesSlider({ newsData }) {
@@ -23,7 +24,7 @@ export default function ServicesSlider({ newsData }) {
                     return news.data.slice(0, 4).map((item) => {
                         console.log(item.title);
                         return (
-                            <SwiperSlide className={`swiper-slide`}>
+                            <SwiperSlide className={`swiper-slide`} key={randomKey()}>
                                 <div className="box-container">
                                     <img className="shadow" src={shadow} alt="" />
                                     <img className="box-image" src={item.img_link} alt="" />

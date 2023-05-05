@@ -1,8 +1,9 @@
 import React from "react";
-import "./Process.scss";
-import { slidesProcess } from "../../utils/slides";
-import vector5 from "../../assets/vectors/vector-5.svg";
 import SliderProcess from "./SliderProcess/SliderProcess";
+import vector5 from "../../assets/vectors/vector-5.svg";
+import { slidesProcess } from "../../utils/slides";
+import randomKey from "../../utils/randomKey";
+import "./Process.scss";
 
 export default function Process() {
 
@@ -30,8 +31,8 @@ export default function Process() {
                 </div>
             </div>
             <div className="process-boxes-container">
-                {slidesProcess.map((slide, index) => (
-                    <div className="process-box" key={index}>
+                {slidesProcess.map((slide) => (
+                    <div className="process-box" key={randomKey()}>
                         <div className="process-circle">{slide.stepNumber}</div>
                         <div className="process-box-info">
                             <img src={slide.image} alt={slide.imageDescription} />

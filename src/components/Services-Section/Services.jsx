@@ -5,6 +5,7 @@ import "./Services.scss";
 import shadow from "../../assets/icons/shadow.svg";
 import vector4 from "../../assets/vectors/vector-4.svg";
 import ServicesSlider from "./ServicesSlider/ServicesSlider";
+import randomKey from "../../utils/randomKey";
 
 export default function Services() {
 
@@ -59,7 +60,7 @@ export default function Services() {
                     return news.data.slice(0, 4).map((item) => {
                         console.log(item.title);
                         return (
-                            <div className="box-container">
+                            <div className="box-container" key={randomKey()}>
                                 <img className="shadow" src={shadow} alt="" />
                                 <img className="box-image" src={item.img_link} alt="" />
                                 <div className="box-text-container">

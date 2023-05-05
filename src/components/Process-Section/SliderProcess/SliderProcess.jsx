@@ -3,6 +3,7 @@ import { slidesProcess } from "../../../utils/slides";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
 import 'swiper/swiper-bundle.css';
+import randomKey from "../../../utils/randomKey";
 
 SwiperCore.use([Navigation]);
 
@@ -20,8 +21,8 @@ export default function SliderProcess() {
             cssMode={true}
             className="slider-services"
         >
-            {slidesProcess.map((slide, index) => (
-                <SwiperSlide className={`swiper-slide vive`}>
+            {slidesProcess.map((slide) => (
+                <SwiperSlide className={`swiper-slide vive`} key={randomKey()}>
                     <div className="process-box">
                         <div className="process-circle">{slide.stepNumber}</div>
                         <div className="process-box-info">

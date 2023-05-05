@@ -2,6 +2,7 @@ import React from "react";
 import { slidesContactUs } from "../../../../utils/slides";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
+import randomKey from "../../../../utils/randomKey";
 import 'swiper/swiper-bundle.css';
 import "./SliderContactUs.scss";
 
@@ -21,8 +22,8 @@ export default function SliderDef() {
             cssMode={true}
             className="contact_slider"
         >
-            {slidesContactUs.map((slide, index) => 
-                <SwiperSlide key={index} className={`swiper-slide`}>
+            {slidesContactUs.map((slide) => 
+                <SwiperSlide key={randomKey()} className={`swiper-slide`}>
                     <div className="contact-container">
                         <img src={slide.image} alt={slide.imageDescription} />
                         <div className="info-container">

@@ -1,5 +1,6 @@
 import React from "react";
 import { navSiteLinks } from "../../../../utils/links";
+import randomKey from "../../../../utils/randomKey";
 
 export default function DropdownMenu({ clicked }) {
 
@@ -7,7 +8,7 @@ export default function DropdownMenu({ clicked }) {
         <div className={`dropdown ${clicked ? 'visible' : 'hidden'}`}>
             <div className="nav-links-container-mobile">
                 {navSiteLinks.map((link) => (
-                    <a href={link.url}>{link.label}</a>
+                    <a href={link.url} key={randomKey()}>{link.label}</a>
                 ))}
             </div>
             <div className="buttons-container-mobile">

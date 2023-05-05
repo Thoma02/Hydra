@@ -3,6 +3,7 @@ import { navSiteLinks } from "../../../utils/links";
 import logo from "../../../assets/icons/Frame.svg";
 import group from "../../../assets/icons/Group.svg";
 import DropdownMenu from "./DropdownMenu/DropdownMenu";
+import randomKey from "../../../utils/randomKey";
 
 export default function Nav() {
     const [clicked, setClicked] = useState(false);
@@ -18,8 +19,8 @@ export default function Nav() {
                 <img src={group} alt="" />
             </div>
             <div className="nav-links-container">
-                {navSiteLinks.map((link, index) => (
-                    <a key={index} href={link.url}>{link.label}</a>
+                {navSiteLinks.map((link) => (
+                    <a key={randomKey()} href={link.url}>{link.label}</a>
                 ))}
             </div>
             <div className="buttons-container">
@@ -27,9 +28,9 @@ export default function Nav() {
                 <button className="join-hydra-button">JOIN HYDRA</button>
             </div>
             <div onClick={handleClick} className={`burger-menu ${clicked ? 'clicked' : ''}`}>
-                <div class="line top"></div>
-                <div class="line middle"></div>
-                <div class="line bottom"></div>
+                <div className="line top"></div>
+                <div className="line middle"></div>
+                <div className="line bottom"></div>
             </div>
             <DropdownMenu clicked={clicked}/>
         </div>
