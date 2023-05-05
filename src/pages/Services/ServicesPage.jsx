@@ -9,9 +9,9 @@ import "./ServicesPage.scss";
 
 export default function ServicesPage() {
 
+
     return (
         <div className="services-page-container">
-            {/* <div className="services-container"> */}
                 <div className="why-build-with-hydra-container">
                     <div className="title-container">
                         <h1>WHY BUILD</h1>
@@ -72,7 +72,6 @@ export default function ServicesPage() {
                         </div>
                     </div>
                 </div>
-            {/* </div> */}
         </div>
     )
 }
